@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Enter Numbers</title>
+</head>
+<body>
+<form action="/process" method="post">
+    <label>
+        <input type="text" name="numbers" placeholder="Enter numbers separated by commas">
+    </label>
+    <button type="submit">Submit</button>
+</form>
+<form action="/previous" method="get">
+    <button type="submit">Show Previous</button>
+</form>
+</body>
+</html>

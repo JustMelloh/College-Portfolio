@@ -1,0 +1,4 @@
+SERVER : https://github.com/JustMelloh/S4Sprint1
+
+CLIENT : https://github.com/im-beck/S4Sprint1Client
+
