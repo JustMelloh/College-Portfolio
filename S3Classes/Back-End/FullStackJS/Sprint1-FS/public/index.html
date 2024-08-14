@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership Confirmation</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kimeiga/bahunya@css/bahunya-0.1.3.css"/>
+</head>
+<body>
+
+<div id="form-container">
+    <h2>Membership Confirmation</h2>
+    <form id="membership-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="token-container" style="display: none;">
+        <p>Your membership token is: <span id="token"></span></p>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    $('#membership-form').submit(function(event) {
+        event.preventDefault();
+        var username = $('#username').val();
+        $.ajax({
+            type: 'POST',
+            url: '/generate-token',
+            data: JSON.stringify({ username: username }),
+            contentType: 'application/json',
+            success: function(response) {
+                $('#token').text(response.token);
+                $('#token-container').show();
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+Command Example:
+
+app <command> <option>
+
+Usage -- 
+
+Help 
+______________________________
+app --help :: Displays help
+
+Initializations 
+______________________________
+app init :: Initialize the app
+app init --files :: Create the DEFAULT app files
+app init --folders :: Create the DEFAULT app folders
+app init --all :: Create all DEFAULT folders and files
+
+Configurations
+______________________________
+
+app config --display :: Displays current configuration file.
+app config --set <KEY NAME> <KEY VALUE> :: Sets/Updates the selected key from the configuration file. 
+
+Tokens
+______________________________
+
+app token --count :: Displays the number of tokens
+app token --list :: Lists all tokens by username and token
+app token --new [username] :: Creates a new token with the provided username
+app token --help :: Displays all token commands
+
+User Updates
+______________________________
+
+Email is prioritized when both registries need to be changed -> app user <function> <username> <email> <phone>
+______________________________
+
+Usage: app user <function> <username> <phone>
+
+app user --updatePhone :: Updates the users phone number
+app user --updateEmail :: Updates the users email
+app user --removeUser :: Removes user from the DB

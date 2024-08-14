@@ -1,0 +1,8 @@
+{
+  "name": "CLI Config Interface",
+  "version": "0.0.1",
+  "description": "A simple CLI for creating folders and adjusting/adding config files and creating tokens.",
+  "main": "hello",
+  "superuser": "admin",
+  "database": "postgreSQL"
+}
